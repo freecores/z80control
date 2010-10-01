@@ -1,0 +1,415 @@
+Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
+11
+980
+OFF
+OFF
+OFF
+ON
+ON
+ON
+FV_OFF
+Level2
+0
+0
+VRSM_ON
+VHSM_ON
+0
+-- Start Library Paths --
+-- End Library Paths --
+-- Start VHDL Libraries --
+-- End VHDL Libraries --
+# entity
+clk_div
+# storage
+db|uart.(1).cnf
+db|uart.(1).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+clk_div.vhd
+8d4021dfa58093e628a0fcd0f12c5e6c
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# lmf
+..|..|..|90sp2|quartus|lmf|maxplus2.lmf
+9a59d39b0706640b4b2718e8a1ff1f
+# macro_sequence
+
+# end
+# entity
+decoder_7seg
+# storage
+db|uart.(3).cnf
+db|uart.(3).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+decoder_7seg.vhd
+21bfa49b85795d3ea5ab4287c1b509a
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+ constraint(number)
+3 downto 0
+PARAMETER_STRING
+USR
+ constraint(hex_disp)
+6 downto 0
+PARAMETER_STRING
+USR
+}
+# lmf
+..|..|..|90sp2|quartus|lmf|maxplus2.lmf
+9a59d39b0706640b4b2718e8a1ff1f
+# macro_sequence
+
+# end
+# entity
+miniUART
+# storage
+db|uart.(4).cnf
+db|uart.(4).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+miniUART.vhd
+61d37d24db63b96146af42b61f5f47
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+ constraint(addr)
+1 downto 0
+PARAMETER_STRING
+USR
+ constraint(datain)
+7 downto 0
+PARAMETER_STRING
+USR
+ constraint(dataout)
+7 downto 0
+PARAMETER_STRING
+USR
+}
+# include_file {
+uart_lib.vhd
+8cf118e5fffb90b86bbf25c5e65dfacc
+}
+# hierarchies {
+miniUART:U1
+}
+# lmf
+..|..|..|90sp2|quartus|lmf|maxplus2.lmf
+9a59d39b0706640b4b2718e8a1ff1f
+# macro_sequence
+
+# end
+# entity
+TxUnit
+# storage
+db|uart.(6).cnf
+db|uart.(6).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+TxUnit.vhd
+8242cf419679a982787d42686fe7647
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+ constraint(datao)
+7 downto 0
+PARAMETER_STRING
+USR
+}
+# include_file {
+uart_lib.vhd
+8cf118e5fffb90b86bbf25c5e65dfacc
+}
+# hierarchies {
+miniUART:U1|TxUnit:TxDev
+}
+# lmf
+..|..|..|90sp2|quartus|lmf|maxplus2.lmf
+9a59d39b0706640b4b2718e8a1ff1f
+# macro_sequence
+
+# end
+# entity
+RxUnit
+# storage
+db|uart.(7).cnf
+db|uart.(7).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+RxUnit.vhd
+dc8e76a7347ab43ebbefea7aedd6f5
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+ constraint(datain)
+7 downto 0
+PARAMETER_STRING
+USR
+}
+# include_file {
+uart_lib.vhd
+8cf118e5fffb90b86bbf25c5e65dfacc
+}
+# hierarchies {
+miniUART:U1|RxUnit:RxDev
+}
+# lmf
+..|..|..|90sp2|quartus|lmf|maxplus2.lmf
+9a59d39b0706640b4b2718e8a1ff1f
+# macro_sequence
+
+# end
+# entity
+TxUnit
+# storage
+db|uart.(9).cnf
+db|uart.(9).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+TxUnit.vhd
+8242cf419679a982787d42686fe7647
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# include_file {
+uart_lib.vhd
+8cf118e5fffb90b86bbf25c5e65dfacc
+}
+# lmf
+..|..|..|90sp2|quartus|lmf|maxplus2.lmf
+9a59d39b0706640b4b2718e8a1ff1f
+# macro_sequence
+
+# end
+# entity
+RxUnit
+# storage
+db|uart.(10).cnf
+db|uart.(10).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+RxUnit.vhd
+dc8e76a7347ab43ebbefea7aedd6f5
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# include_file {
+uart_lib.vhd
+8cf118e5fffb90b86bbf25c5e65dfacc
+}
+# lmf
+..|..|..|90sp2|quartus|lmf|maxplus2.lmf
+9a59d39b0706640b4b2718e8a1ff1f
+# macro_sequence
+
+# end
+# entity
+UART
+# storage
+db|uart.(8).cnf
+db|uart.(8).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+uart.vhd
+7b4bd997dca5c87516a6fe50a95d8b
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+brdivisor
+1302
+PARAMETER_SIGNED_DEC
+USR
+ constraint(wb_adr_i)
+1 downto 0
+PARAMETER_STRING
+USR
+ constraint(wb_dat_i)
+7 downto 0
+PARAMETER_STRING
+USR
+ constraint(wb_dat_o)
+7 downto 0
+PARAMETER_STRING
+USR
+}
+# lmf
+..|..|..|90sp2|quartus|lmf|maxplus2.lmf
+9a59d39b0706640b4b2718e8a1ff1f
+# macro_sequence
+
+# end
+# entity
+ClkUnit
+# storage
+db|uart.(2).cnf
+db|uart.(2).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+clkUnit.vhd
+dd57d2fade732dba78887ed762c1a44
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# include_file {
+uart_lib.vhd
+8cf118e5fffb90b86bbf25c5e65dfacc
+}
+# hierarchies {
+miniUART:U1|ClkUnit:ClkDiv
+}
+# lmf
+..|..|..|90sp2|quartus|lmf|maxplus2.lmf
+9a59d39b0706640b4b2718e8a1ff1f
+# macro_sequence
+
+# end
+# entity
+top_uart
+# storage
+db|uart.(0).cnf
+db|uart.(0).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+top_uart.vhd
+f8c7f5d44e2383c0ee1e674e7f28cf8
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+|
+}
+# lmf
+..|..|..|90sp2|quartus|lmf|maxplus2.lmf
+9a59d39b0706640b4b2718e8a1ff1f
+# macro_sequence
+
+# end
+# complete
+
